@@ -8,22 +8,16 @@
 
 <style>
 
-h2 {
-  font-family:;
-  color: #ffffff
-}
-
-p {
-  color: #ffffff;
-}
-
-h4 {
-  color: #ffffff;
+p.1 {
+  font-size: 13px;
 }
 
 body {
   background-image: url('IMG/ADM\ -\ LOGIN.png');
   background-repeat: no-repeat;
+  color: #ffffff;
+  font-family: 'Raleway'
+
 }
 
 .button {
@@ -31,13 +25,15 @@ body {
   border-radius: 100px;
   color: #ffffff;
   background-color: #5B71E2;
-  padding: 10px 140px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 15px;
   cursor: pointer;
   transition-duration: 0.4s;
+  width: 100%;
+  height: 35px;
+
 }
 
 .button:focus {
@@ -56,21 +52,24 @@ body {
   color: #ffffff;
   background-color: #393939;
   background-image: 20%;
-  margin: ;
-  padding: 10px 20px;
-}
-
-.checkbox {
-  border: none;
-  color: #ffffff;
-  background-color: #393939;
-}
-
-.ilustra {
-  padding: 100px;
-  position: absolute;
+  width: 100%;
+  height: 35px;
+  padding-left: 20px;
+  padding-right: 20px;
 
 }
+
+.linha{
+  display: flex;
+  align-items: center;
+  padding-left: 400px;
+}
+
+.ilustra{
+  padding-left: 180px;
+  padding-top: 80px;
+}
+
 
 }
 </style>
@@ -81,20 +80,23 @@ body {
        <img src="img/icon.svg" alt="LOGO" class="logo">
        
     </header>
-
-    <h2>Login</h2>
-    <p>Bem-vindo de volta! Informe seus dados.</p>
-    <h4>Usuário</h4>
-    <input type="email" name="Email" id="email" class="input">
-    <h4>Senha</h4>
-    <input type="password" name="Senha" id="senha" class="input">
-    <br>
-    <input type="checkbox" name="checkbox" id="check" class="checkbox">
-    <p>Lembre de mim</p>
-    <a href="http://" title="Esqueceu a senha?"></a>
-    <input type="button" class="button" id="button" value="Login">
-
-    <img src="img/ilustra_login.svg" class="ilustra">
+    <div class="linha">
+        <div>
+            <h2>Login</h2>
+            <p>Bem-vindo de volta! Informe seus dados.</p>
+            <p>Usuário</p>
+            <input type="email" name="Email" id="email" class="input">
+            <p>Senha</p>
+            <input type="password" name="Senha" id="senha" class="input">
+            <br><br><br>
+            <input type="checkbox"/>Lembre de mim</label>
+            <a href="http://" title="Esqueceu a senha?"></a> <br><br><br>
+            <input type="button" class="button" id="button" value="Login">
+        </div>
+        <div>
+            <img src="img/ilustra_login.svg" class="ilustra">
+        </div>
+    </div>
 
 </body>
 </html>
