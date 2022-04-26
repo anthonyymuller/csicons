@@ -7,17 +7,30 @@
     <title>CS Icons</title>
 
 <style>
-
-p.1 {
-  font-size: 13px;
-}
-
 body {
   background-image: url('IMG/ADM\ -\ LOGIN.png');
   background-repeat: no-repeat;
   color: #ffffff;
-  font-family: 'Raleway'
+}
 
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 15px;
+  text-align: justify;
+}
+
+a {
+  color: #7E7E7E;
+  align-self: auto;
 }
 
 .button {
@@ -33,12 +46,6 @@ body {
   transition-duration: 0.4s;
   width: 100%;
   height: 35px;
-
-}
-
-.button:focus {
-  background-color: #7A7AFF;
-  color: #ffffff
 }
 
 .logo {
@@ -49,29 +56,45 @@ body {
 .input {
   border: none;
   border-radius: 100px;
+  background-color: #3D3D3D;
   color: #ffffff;
-  background-color: #393939;
-  background-image: 20%;
   width: 100%;
   height: 35px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0px 20px;
+  box-sizing: border-box;
+}
 
+::placeholder {
+  color: #ffffff;
+  opacity: 0.20;
+}
+
+.input:focus {
+  border: #ffffff 1px;
 }
 
 .linha{
   display: flex;
   align-items: center;
-  padding-left: 400px;
+  justify-content: space-between ;
+  padding: 0px 300px;
 }
 
 .ilustra{
   padding-left: 180px;
   padding-top: 80px;
+  width: 70%;
 }
 
-
+.checkbox {
+  margin-right: 10px;
+  color: #5B71E2;
 }
+
+text {
+  color: aqua;
+}
+
 </style>
 </head>
 
@@ -84,13 +107,13 @@ body {
         <div>
             <h2>Login</h2>
             <p>Bem-vindo de volta! Informe seus dados.</p>
-            <p>Usuário</p>
-            <input type="email" name="Email" id="email" class="input">
-            <p>Senha</p>
-            <input type="password" name="Senha" id="senha" class="input">
+            <h3>Usuário</h3>
+            <input type="user" name="User" id="User" class="input" placeholder="Usuário">
+            <h3>Senha</h3>
+            <input type="password" name="Senha" id="senha" class="input" placeholder="Senha">
             <br><br><br>
-            <input type="checkbox"/>Lembre de mim</label>
-            <a href="http://" title="Esqueceu a senha?"></a> <br><br><br>
+            <input type="checkbox" class="checkbox"/>Lembre de mim</label>
+            <a href="#">Esqueceu a senha?</a>
             <input type="button" class="button" id="button" value="Login">
         </div>
         <div>
