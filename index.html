@@ -5,17 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CS Icons</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
 <style>
+
 body {
   background-image: url('IMG/ADM\ -\ LOGIN.png');
   background-repeat: no-repeat;
   color: #ffffff;
+  font-family: "Raleway", sans-serif;
 }
 
 h2 {
   font-size: 30px;
-  font-weight: bold;
+  font-weight: 800;
 }
 
 h3 {
@@ -30,7 +33,12 @@ p {
 
 a {
   color: #7E7E7E;
-  align-self: auto;
+  font-size: 10px;
+  float: right;
+}
+
+a:hover {
+  color: #5B71E2;
 }
 
 .button {
@@ -73,27 +81,38 @@ a {
   border: #ffffff 1px;
 }
 
+.label{
+  font-size: 10px;
+  color: #ffffff;
+  position: relative;
+}
+
+.label::before{
+  content: '';
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: -10px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+.input:checked + .label::before{
+  content: '\2713';
+  font-size: 10px;
+  text-align: center;
+  background-color: #ff0000;
+  border: 10px solid #73AD21;
+}
+
 .linha{
-  display: flex;
-  align-items: center;
-  justify-content: space-between ;
-  padding: 0px 300px;
-}
+        display: flex;
+        align-items: center;
+    }
 
-.ilustra{
-  padding-left: 180px;
-  padding-top: 80px;
-  width: 70%;
-}
-
-.checkbox {
-  margin-right: 10px;
-  color: #5B71E2;
-}
-
-text {
-  color: aqua;
-}
 
 </style>
 </head>
@@ -101,25 +120,25 @@ text {
 <body>
     <header>
        <img src="img/icon.svg" alt="LOGO" class="logo">
-       
     </header>
     <div class="linha">
-        <div>
-            <h2>Login</h2>
-            <p>Bem-vindo de volta! Informe seus dados.</p>
-            <h3>Usuário</h3>
-            <input type="user" name="User" id="User" class="input" placeholder="Usuário">
-            <h3>Senha</h3>
-            <input type="password" name="Senha" id="senha" class="input" placeholder="Senha">
-            <br><br><br>
-            <input type="checkbox" class="checkbox"/>Lembre de mim</label>
-            <a href="#">Esqueceu a senha?</a>
-            <input type="button" class="button" id="button" value="Login">
-        </div>
-        <div>
-            <img src="img/ilustra_login.svg" class="ilustra">
-        </div>
-    </div>
+      <div>
+          <h2>Login</h2>
+          <p>Bem-vindo de volta! Informe seus dados.</p>
+          <h4>Usuário</h4>
+          <input type="email" name="Email" id="email" class="input">
+          <h4>Senha</h4>
+          <input type="password" name="Senha" id="senha" class="input">
+          <br>
+          <input type="checkbox" name="checkbox" id="check" class="checkbox">
+          <p>Lembre de mim</p>
+          <a href="http://" title="Esqueceu a senha?"></a>
+          <input type="button" class="button" id="button" value="Login">
+      </div>
+      <div>
+          <img src="img/ilustra_login.svg" class="ilustra">
+      </div>
+  </div>
 
 </body>
 </html>
